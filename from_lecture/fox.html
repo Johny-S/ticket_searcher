@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <title>CORS</title>
+</head>
+
+<body>
+    <button id="fetchDog">Fetch a fox</button>
+    <div id="dogContainer"></div>
+
+    <script>
+        const container = document.getElementById("dogContainer");
+        const button = document.getElementById("fetchDog");
+
+        button.addEventListener("click", async (e) => {
+            console.log(1);
+            let resp = await fetch("https://randomfox.ca/floof/");
+            let json = await resp.json();
+
+            container.innerHTML = `<img src="${json.image}" />`
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ticket catcher</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="title">ticket catcher</div>
+    <div class="main">
+        <form id="dataForm" action="">
+            <label for="date">Дата</label>
+            <input type="datetime-local" list="1" name="date" id="date" value="2019-10-19T00:00">
+            <label for="from">Откуда</label>
+            <select id="from" name="from">
+                <option value="060073">Москва</option>
+                <option value="031812">Санкт-Петербург</option>
+            </select>
+            <label for="to">Куда</label>
+            <select id="to" name="to">
+                <option value="060073">Москва</option>
+                <option value="031812">Санкт-Петербург</option>
+            </select>
+            <input type="submit" id="fetchTicket" value="Отправить">
+        </form>
+
+        <div id="ticketContainer">
+            <div class="header">
+                <div class="coll-1">Поезд</div>
+                <div class="coll-2">Отправление</div>
+                <div class="coll-3">Прибытие</div>
+                <div class="coll-4">Время в пути</div>
+            </div>
+            <div class="line-data"></div>
+        </div>
+    </div>
+    <script>
+        const sities = [
+            ['Москва', '060073'],
+            ['Санкт-Петербург', '031812'],
+            ['Новосибирск', '850609'],
+            ['Екатеринбург', '780506'],
+            ['Нижний Новгород', '260200'],
+            ['Казань', '250302'],
+            ['Челябинск', '800008'],
+            ['Омск', '830709'],
+            ['Самара', '657907'],
+            ['Ростов-на-Дону', '510204'],
+            ['Уфа', '654504'],
+            ['Красноярск', '890004'],
+            ['Пермь', '761000'],
+            ['Воронеж', '596506'],
+            ['Волгоград', '610008'],
+        ]
+        const addSities = (arr) => {
+            arr.forEach(el => {
+                from.innerHTML += `<option value="${el[1]}">${el[0]}</option>`;
+                to.innerHTML += `<option value="${el[1]}">${el[0]}</option>`;
+            });
+        }
+
+        addSities(sities);
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

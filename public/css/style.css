@@ -1,0 +1,76 @@
+body {
+  background-image: url('../images/train.jpg');
+  background-size: cover;
+  height: 800px;
+}
+
+.title {
+  letter-spacing: 10px;
+  color: chocolate;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: bold;
+  margin: 50px;
+  text-shadow: 0 0 10px white, 0 20px 30px black;
+}
+
+.main {
+  margin: auto;
+  width: 800px;
+}
+
+#date {
+  width: 130px;
+}
+
+div {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.header {
+  margin-top: 15px;
+  display: flex;
+  width: 800px;
+}
+
+.line-data {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+}
+
+#ticketContainer {
+  box-shadow: 0 0 5px 5px white;
+}
+
+.line-data div {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.header div {
+  background-color: rgba(128, 128, 128, 0.7);
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.coll-1 {
+  width: 100px;
+}
+.coll-2 {
+  width: 250px;
+}
+.coll-3 {
+  width: 250px;
+}
+.coll-4 {
+  width: 200px;
+}
+
+label {
+  font-weight: bold;
+}
